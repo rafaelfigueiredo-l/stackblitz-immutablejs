@@ -36,10 +36,6 @@ class App extends Component {
     return 'candy';
   }
 
-
-
-
-
   render() {
     const {data} = this.state;
     const a0 = data.getIn(['itens_array', 0]);
@@ -92,10 +88,18 @@ class App extends Component {
     return (
       <div>
         <Hello name={this.state.name} />
-
       </div>
     );
   }
 }
 
 render(<App />, document.getElementById('root'));
+
+
+//// ES6 to use with child props
+// const {profile, image, age, gender} = this.props.client;
+// ImmutableJS
+// const profile = Immutable.get(this.props.client, 'profile');
+// const image = Immutable.get(this.props.client, 'image');
+// const age = Immutable.get(this.props.client, 'age');
+// const gender = Immutable.get(this.props.client, 'gender');
